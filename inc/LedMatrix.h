@@ -64,7 +64,7 @@
 #define ALL_DATAPORT_PINS (R0 | G0 | B0 | R1 | G1 | B1)
 #define ALL_CTRLPORT_PINS (DEMUXA | DEMUXB | DEMUXC | DEMUXD | SCLK | LATCH | OE)
 
-// Bit field for holding color information
+// Structure for holding color information
 typedef struct Color_t
 {
 	uint8_t R;

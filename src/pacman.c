@@ -96,7 +96,7 @@ void InitGame(void)
 	TIMER1_CTL_R &= ~0x1;	// Disable timer
 	TIMER1_CFG_R = 0;		// 32-bit timer
 	TIMER1_TAMR_R |= 0x32;	// Set it to periodic mode, counting up, interrupt enabled
-	TIMER1_TAILR_R = 20000000;	// count up to 12_000_000 before reloading
+	TIMER1_TAILR_R = 20000000;	// count up to 20_000_000 before reloading
 	TIMER1_TAMATCHR_R = 20000000;	// Trigger interrupt after 150ms has passed
 	TIMER1_IMR_R |= 0x10;	// Enable timer A match interrupt
 

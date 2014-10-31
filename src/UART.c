@@ -1,7 +1,15 @@
 #include <stdint.h>
 #include "inc/tm4c123gh6pm.h"
 
-// Initialize the UART and GPIO needed to use the UART
+/**
+* @brief	Initialize the hardware needed to use the UART
+*
+* @param	IBRD The integer baud rate divisor to generate the baudrate from.
+*				 The equation for calculating this value is as follows:
+*					IBRD = SYSCLK / (16 * BAUD_RATE)
+*
+* @retval	none
+*/
 void InitUART(uint16_t IBRD)
 {
 	// Set PC4 and PC5 to their alternate function (UART4) and enable them
@@ -26,7 +34,13 @@ void InitUART(uint16_t IBRD)
 	UART4_CTL_R |= 0x101;
 }
 
-// Send a byte of data over the UART
+/**
+* @brief 	Send a byte of data over the UART
+*
+* @param	data The 8 bits of data you want to send
+*
+* @retval	none
+*/
 void UARTTransmit(uint8_t data)
 {
 	int uart_enabled = (UART4_CTL_R & 1);

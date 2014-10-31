@@ -8,8 +8,6 @@
 #include "UART.h"
 #include "Pacman.h"
 
-//const char msg[] = "Fuck NES Controllers! (From TivaC)";
-
 int main(void)
 {
 	// Enable clocks
@@ -35,17 +33,9 @@ int main(void)
 	// Enable timer that drives the main game loop
 	TIMER1_CTL_R |= 0x1;
 
-	//SetColor(0, 127, 127);
-	//DrawGridArray(level);
-
 	// Main While Loop
 	while(1)
 	{
-		/*for(i = 0; i < strlen(msg); i++)
-			UARTTransmit(msg[i]);
-
-		UARTTransmit('\n');*/
-
 
 	}
 }
